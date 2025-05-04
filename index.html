@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HQ Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>HQ Control Panel</h1>
+    </header>
+
+    <div class="dashboard">
+      <div class="stats">
+        <div class="stat" id="activeTasks">
+          <h3>Active Tasks</h3>
+          <p>0</p>
+        </div>
+        <div class="stat" id="systemHealth">
+          <h3>System Health</h3>
+          <p>Good</p>
+        </div>
+        <div class="stat" id="currentOperations">
+          <h3>Current Operations</h3>
+          <p>0</p>
+        </div>
+      </div>
+
+      <div class="control-panel">
+        <h2>Manual Control Panel</h2>
+        <label for="taskDescription">Tactical Task Description:</label>
+        <textarea id="taskDescription" placeholder="Enter task details here..." rows="4" cols="50"></textarea><br><br>
+        <button class="btn" onclick="initiateTask()">Initiate Task</button>
+        <button class="btn" onclick="shutdownSystem()">Shutdown System</button>
+        <button class="btn" onclick="startMaintenance()">Start Maintenance</button>
+      </div>
+
+      <div class="task-list">
+        <h2>Active Tasks List</h2>
+        <div id="taskList" class="task-list-container">
+          <!-- List of active tasks will appear here -->
+        </div>
+      </div>
+    </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
